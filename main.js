@@ -11,6 +11,12 @@ app.get("/", (req, res) => {
   res.send("Server del mio blog");
 });
 
+// CREO LA ROTTA PER OTTENERE I POSTS
+app.get("/bacheca", (req, res) => {
+  console.log("Rotta dei posts");
+  res.json(posts);
+});
+
 // CREO L'ARRAY DEI POST
 const posts = [
   {
